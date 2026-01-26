@@ -1,0 +1,2 @@
+val factor: int -> string 
+
