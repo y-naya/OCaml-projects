@@ -1,4 +1,5 @@
-# Trial Division
+# Factorization
+## Trial Division
 The most laborious but easiest to understand of the integer factorization algorithms.
  > If the integer to be factored (n), can be divided by each number in turn that is less than or equal to the square root of n. <br> - Fibonacci
 

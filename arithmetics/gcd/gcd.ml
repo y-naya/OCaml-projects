@@ -22,8 +22,8 @@ let gcd_steps' x y =
 (** computes the greatest common divisor using the remainder of the division *)
 let rec gcd x y =
   (** precondition: x > 0 *)
-  if (x = 0) then (y, s)
-  else if (y = 0) then (x, s)
+  if (x = 0) then y
+  else if (y = 0) then x
   else if (x > y) then gcd (x mod y) y
   else gcd x (y mod x)
 
