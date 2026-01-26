@@ -50,6 +50,7 @@ Most notably though, the implementation is ridiculously simpler.
 
 ```ocaml
 let lcm a b =
+    (** Precondition: a > 0, b > 0 *)
 	(a * b) / (Gcd.gcd a b)
 ```
 <span style="color: gray">Please refer to [this folder](/arithmetics/gcd/) for information on the implementation of _gcd_</span>
