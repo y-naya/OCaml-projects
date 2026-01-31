@@ -4,7 +4,7 @@ I have yet to do a decent README file for the root of this repo but I'm still wo
 1. [Basic Concepts on OCaml](/basic-concepts/)   
     Reccomended for those new to the language, so they can quickly grasp how types work
 2. [Arithmetics](/arithmetics/)
-3. [Game Solvers]
+3. [Game Solvers](/game-solvers/)
 4. [Data Structures](/data-structures/)
 
 > [!NOTE]
@@ -20,8 +20,9 @@ Classification depending on what you might be interested from a programing point
 
 ## Recursion
 ++ differentiate tail and non-tail recursion
-[factorization](/arithmetics/factorization/)
-[hanoi]
+
+[factorization](/arithmetics/factorization/)  
+[hanoi](/game-solvers/hanoi/)
 
 ## Backtracking
 
