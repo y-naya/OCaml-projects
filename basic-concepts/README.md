@@ -390,3 +390,5 @@ val meaning_of_life : int option -> int option = <fun>
 
 ---
 For more information refer to the [official documentation](https://ocaml.org/docs/basic-data-types)
+
+More detailed information on the language can also be found on the [api documentation](https://ocaml.org/manual/5.4/api/index.html)
