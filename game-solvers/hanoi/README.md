@@ -102,24 +102,66 @@ hanoi n=3 src=3 tar=2
 ===========
 ```
 
-### Return the nth move in a problem
 
+
+### Return the nth move in a problem
 
 We use the divide and conquer so that we only go down one of the branches on the recursion tree, therefore shortening its computation time.
 
+This approach computes the number of moves that it takes to solve half the problem - this is, moving the biggest disk to the target rod.  
+We'll refer to this move as `middlemove` or `middle`.   
+<span style="color: gray">In the previous example, this would be getting to the move `n=3 src=3 tar=2` represented all the way to the right.</span>
+
+
+
+#### `middlemove : int -> int`
+Computes the number of moves necessary to reach the largest disk
+$$ f(n)\,=\,2^{n-1} $$
+```ocaml
+let rec middlemove = function
+    1 -> 1
+  | n -> 2 * middlemove (n-1)
+```
+<span style="color: gray"> Note that this function is NOT tail-recursive. There's a total of `n` calls (counting the original), and each call is put on hold until the result of the `n-1` calls made after it is returned. </span>
+
+<span style="color: gray">More on tail-recursion [here]() </span>
+
+
 #### `nth_hanoi_move : int -> int -> int -> int -> int * int`
 
-`n` nth move of the recursive solution for the problem
-`nd
+`n`: nth move  
+`nd`: number of disks  
+`src`: source rod  
+`tar`: target roc
+
+If **`n < middle`**, we know that we won't reach the biggest disk.  
+We are in the phase of the problem when we are still **moving the `nd - 1` disks to the spare rod**. Therefore, we make a call on this subproblem.
+
+If **`n = middle`**, then we know it will be **moving the biggest disk from the source rod to the target rod**.
+
+If **`n > middle`**, we know that we have already moved the biggest disk to the target.  
+We are in the phase of the problem when we are **moving the `nd - 1` from the spare to the target rod**. Therefore, we make a call on this subproblem.  
+
+> [!WARNING]
+> Note that since that we are changing the problem, we must also adjust `n` accordingly.  
+> This is not an issue in the first two cases, but when `n > middle` we must take into account that the new subproblem begins right after the middle move.  
+> `n = n - middle`
 
 ```ocaml
 let rec nth_hanoi_move n nd src tar =
     let spare = spare src tar in
+    (* middle move for nd disks *)
     let middle = middlemove nd in
+        (* nth move is the middle move*)
         if n = middle
+            (* move biggest disk from src to tar *)
             then (src, tar)
+        (* nth move comes before the middle move *)
         else if n < middle
+            (* make the problem smaller taking the first half *)
             then nth_hanoi_move n (nd-1) src spare
+        (* nth move comes after the middle move *)
         else
+            (* make the problem smaller taking the second half *)
             nth_hanoi_move (n - middle) (nd-1) spare tar
 ```
