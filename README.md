@@ -19,10 +19,14 @@ I have yet to do a decent README file for the root of this repo but I'm still wo
 Classification depending on what you might be interested from a programing point of view:
 
 ## Recursion
-++ differentiate tail and non-tail recursion
-
+### Not tail-recursive
 [factorization](/arithmetics/factorization/)  
 [hanoi](/game-solvers/hanoi/)
+
+### Tail-recursive
+[lists](/data-structures/lists/) - tail-recursive and not tail-recursive functions are explicitly indicated
+
+
 
 ## Backtracking
 
