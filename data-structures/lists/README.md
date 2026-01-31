@@ -1,6 +1,6 @@
 # List
 
-As an exercise I've done the [implementation of all the functions in the module List](/data-structures/lists/myList.ml) from the Standard Library of OCaml based solely on their [official documentation](https://ocaml.org/manual/5.4/api/List.html), which describes their behavior and whether or not they are tail-recursive.
+As an exercise I've done the [implementation of most of the functions in the module List](/data-structures/lists/myList.ml) from the Standard Library of OCaml based solely on their [official documentation](https://ocaml.org/manual/5.4/api/List.html), which describes their behavior and whether or not they are tail-recursive.
 
 There's also a file in there with some [listing functions](/data-structures/lists/listing.ml) described on [its corresponding mli](/data-structures/lists/listing.mli). These are implemented in such a way that they are all tail-recursive.
 
