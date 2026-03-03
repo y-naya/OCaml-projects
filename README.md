@@ -32,7 +32,7 @@ Classification depending on what you might be interested from a programing point
 
 ## Custom Types
 
-## References of interest
+# References of interest
 All of these redirect to the official documentation of OCaml
 - [Stdlib (standard module) documentation](https://ocaml.org/manual/5.4/api/Stdlib.html)
 - [managing command-line arguments](https://ocaml.org/docs/cli-arguments)
