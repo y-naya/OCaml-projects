@@ -31,3 +31,9 @@ Classification depending on what you might be interested from a programing point
 ## Backtracking
 
 ## Custom Types
+
+## References of interest
+All of these redirect to the official documentation of OCaml
+- [Stdlib (standard module) documentation](https://ocaml.org/manual/5.4/api/Stdlib.html)
+- [managing command-line arguments](https://ocaml.org/docs/cli-arguments)
+- [debugging](https://ocaml.org/docs/debugging)
